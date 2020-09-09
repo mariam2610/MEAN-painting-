@@ -1,0 +1,17 @@
+.row{
+    color:white;
+    background-image: linear-gradient(#721b65,#cc0e74);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+a{
+    color: white;
+}
+
+li{
+    margin-left: 25px;
+}
+
+img{
+    margin: 5px;
+}

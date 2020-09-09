@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <button type="button" class="btn btn-light btn-lg btn-block">My Cart Items</button>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr class="text-center">
+                    <th>Sr No</th>
+                    <th>Painting Name</th>
+                    <th>Painting Image</th>
+                    <th>Painting Quantity</th>
+                    <th>Painting Price</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of cart; let m = index" class="text-center">
+                    <td>{{m+1}}</td>
+                    <td>{{i.product_name}}</td>
+                    <td>
+                        <img width="80px" height="50px" src="http://localhost:3005/{{i.product_image}}" alt="">
+                    </td>
+                    <td>{{i.product_count}}</td>
+                    <td>{{i.product_price}}</td>
+                    <td>{{i.product_count * i.product_price }}</td>
+                    <td>
+                        <button (click)="deleteCart(m)" class="btn-outline-light">
+                            <img width="30px" height="30px" src="../../assets/db.jpg" alt="">
+                        </button>
+                    </td>
+
+                </tr>
+                <tr *ngIf="cart.length === 0">
+                    <th class="text-center" colspan="7">
+                        Cart is empty!
+                        <br>
+                        <a routerLink="/homepage">  Check out new paintings! </a>
+                    </th>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th colspan="5" class="text-right">
+                        Amount to Pay
+                    </th>
+                    <th colspan="2">
+                        Rs. {{final_total}}
+                    </th>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4 text-center">
+
+        <button (click)="placeOrder()" class="btn btn-success po">
+            Place Order
+        </button>
+    </div>
+    <div class="col-lg-4"></div>
+</div>

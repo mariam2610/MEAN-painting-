@@ -1,0 +1,23 @@
+<div class="row">
+
+    <div class="col-lg-4 text-center border-1" *ngFor="let i of products">
+        <a routerLink="/productdetails/{{i._id}}">
+        <button type="button" class="btn btn-light btn-lg btn-block myhead">{{i.product_name}}</button>
+        
+        <img width="300px" height="300px" src="http://localhost:3005/{{i.productImagePath}}" alt="">
+        <p class="hide">
+            Hurry only {{i.product_stock}} left..!
+        </p>
+        <h5>
+            {{i.product_desc}}
+        </h5>
+        <h5>
+            Rs. {{i.product_price}}
+        </h5>
+        
+        <p>Surface used is {{i.product_surface}}</p>
+
+
+        </a>
+    </div>
+</div>

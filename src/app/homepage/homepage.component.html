@@ -1,0 +1,82 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-interval=2000 data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img style="padding: 5px;" height="300px" src="../../assets/unsplash1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-lg-4">
+                    <img style="padding: 5px;" height="300px" src="../../assets/debby-hudson-MzSqFPLo8CE-unsplash.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-lg-4">
+                    <img style="padding: 5px;" height="300px" src="../../assets/unsplash2.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img style="padding: 5px;" height="300px" src="../../assets/unsplash4.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-lg-4">
+                    <img style="padding: 5px;" height="300px" src="../../assets/kelli-tungay-Sj0nhVIb4eY-unsplash.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-lg-4">
+                    <img style="padding: 5px;" height="300px" src="../../assets/unsplash6.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img style="padding: 5px;" height="300px" src="../../assets/unsplash7.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-lg-4">
+                    <img style="padding: 5px;" height="300px" src="../../assets/steve-johnson-A2OL6S9zB7o-unsplash.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-lg-4">
+                    <img style="padding: 5px;" height="300px" src="../../assets/unsplash9.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<hr>
+
+<button type="button" class="btn btn-light btn-lg btn-block t">"Art is not what you see, but what you make others see.”</button>
+
+<div class="row">
+
+    <div class="col-lg-4 text-center" *ngFor="let p of products">
+        <a routerLink="/productdetails/{{p._id}}">
+            
+            <button type="button" class="btn btn-light btn-lg btn-block myhead">{{p.product_name}}</button>
+            <img width="200px" height="200px" src="http://localhost:3005/{{p.productImagePath}}" alt="">
+            <p class="hide">Hurry only {{p.product_stock}} left..!</p>
+            <h5>
+                 <i>{{p.product_desc}}</i>
+            </h5>
+            <h5> 
+                <i>Rs. {{p.product_price}}</i>
+            </h5>
+        </a>
+    </div>
+</div>

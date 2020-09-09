@@ -1,0 +1,41 @@
+<div class="row">
+
+    <div class="col-lg-4 text-center" style="padding: 1cm;">
+        <img width="400px" height="450px" src="http://localhost:3005/{{products.productImagePath}}" alt="NA">
+    </div>
+
+
+    <div class="col-lg-8 bg-gray" style="padding: 1cm;">
+        <h5 style="color:darkblue">
+           <i> {{products.product_name}} </i>
+        </h5>
+        <hr>
+        <p>
+            Description : {{products.product_desc}}
+        </p>
+        <hr>
+        <p>
+            Price : Rs. {{products.product_price}}
+        </p>
+        <hr>
+        <p>
+            Artist : {{products.product_artist.artist_name}}
+        </p>
+
+        <hr>
+        <p>Medium : {{products.product_medium}}</p>
+        <hr>
+        <p>Surface : {{products.product_surface}}</p>
+        <hr>
+        <p>Size (H X W in inches) : {{products.product_height}} x {{products.product_width}}</p>
+        <hr>
+        <p>
+            Artwork's Count:
+            <input type="number" name="cnt" id="#ingre_qty" #ingre_qty min="1" value="1">
+        </p>
+        <hr>
+        <button (click)="addTocart()" class="btn btn-outline-warning btn">
+            Add to Cart
+        </button>
+    </div>
+</div>

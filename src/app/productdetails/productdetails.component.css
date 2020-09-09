@@ -1,0 +1,44 @@
+.checked{
+    color:yellow;
+}
+
+h2, h3, h4, h5, p{
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 5px;
+    color: #381460;
+    /* font-size: 20px; */
+}
+
+span, select, option, input
+{
+    width: 60px;
+    background-color: #d89cf6;
+    color: black;
+}
+
+/* .btn{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-width: 5px;
+    border-style: double; 
+    background-color: #d89cf6;
+    height: 80px;
+    width: 80px;
+} */
+
+.btn{
+    background-image: linear-gradient(#e7305b,#c70039);
+    /* background-color: #c70039; */
+    color: white;
+}
+
+select {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+option::before {
+  counter-increment: section;
+  content: counters(section,".") " ";
+}

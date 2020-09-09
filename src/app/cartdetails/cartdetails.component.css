@@ -1,0 +1,40 @@
+.row{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+    padding: 1cm;
+}
+
+.btn-lg{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom:10px ;
+    background-color: #efb1ff;
+}
+.po{
+    background-image: linear-gradient(#e7305b,#c70039);
+    /* background-color: #c70039; */
+    text-align: center;
+    color: white;
+}
+
+tr{
+    font-size: medium;
+}
+.tbl{
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-style: double;
+    border: 2px;
+    border-color: #381460;
+}
+
+a, th{
+    color: #381460;
+}
+
+thead{
+    border: #381460;
+    border-width: 3px;
+}

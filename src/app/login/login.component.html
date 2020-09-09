@@ -1,0 +1,43 @@
+<form #myform="ngForm" (submit)="loginClicked(myform)">
+
+    <div class="row">
+        <div class="col-lg-4">
+
+        </div>
+
+        <div class="col-lg-4 text-left log">
+            <div class="form-group text-center" style="margin: 10px;">
+                <img src="../../assets/logo2.jpeg" height="100px" width="200px" alt="" class="center" style="background-color: #cbf1f5;">
+                    <!-- <h4 style="color: white; font-family: Georgia, 'Times New Roman', Times, serif; background-image: linear-gradient(#721b65,#cc0e74);"> <i> Be Creative - PaintIt </i> </h4> -->
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email : </label>
+                <input ngModel type="email" class="form-control" name="user_email" value="emailid" id=""
+                    placeholder="Enter Email Address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password : </label>
+                <input ngModel type="password" class="form-control" name="user_pswd" value="pswd" id=""
+                    placeholder="Enter Your Password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-success form-control">Login</button>
+                
+            </div>
+            <br>
+            <hr>
+            <div class="form-group">
+                <label style="color: black;">New User?</label>
+                <a routerLink="/register"> <button class="btn btn-outline-primary form-control">Register Here</button> </a>
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+        </div>
+    </div>
+</form>

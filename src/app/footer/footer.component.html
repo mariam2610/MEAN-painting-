@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-lg-3">
+        <h5>For Buyers</h5>
+        <a routerLink="/login"><li>Login</li></a>
+        <a routerLink="/register"><li>Register</li></a>
+        <a routerLink="/cartdetails"><li>Your Wishlist</li></a>
+        <a routerLink="/cartdetails"><li>Your Cart</li></a>
+        <a routerLink="/products"><li>Start Selling?</li></a>
+    </div>
+    <div class="col-lg-3">
+        <h5>Top Categories</h5>
+        <!-- <li *ngFor="let c of categories">{{c.category_name}}</li> -->
+        <a routerLink="/categorypage/{{i._id}}" *ngFor="let i of categories"><li>{{i.category_name}}</li></a>
+
+    </div>
+    <div class="col-lg-3">
+        <h5>FAQs</h5>
+        <a href=""><li>Shipping Queries</li></a>
+        <a href=""><li>Return Policy</li></a> 
+        <a href=""><li>Payment Queries</li></a>
+    </div>
+    <div class="col-lg-3">
+        <h5>Connect with us at</h5>
+        <a href="https://www.instagram.com/accounts/login/?hl=en"><img height="50px" width="50px" src="../../assets/insta.jpeg" alt=""></a>
+        <br>
+        <a href="https://www.whatsapp.com/"><img height="50px" width="50px" src="../../assets/whatsapp.jpeg" alt=""></a>
+        <br>
+        <a href="https://accounts.google.com"><img height="50px" width="50px" src="../../assets/mail.png" alt=""></a>
+        <br>
+        <a href="https://www.whatsapp.com/"><img height="50px" width="50px" src="../../assets/call.png" alt=""></a>
+       
+    </div>
+</div>
+<div class="row text-center">
+    <h6>
+        PaintIt is an Online Art Gallery based in India & open to the world for connecting art and art admirers. You
+        can browse and buy artworks and paintings online in few defined steps. PaintIt is a platform for promoting quality
+        artwork created by artists. <br>
+        © 2020 PaintIt.com
+    </h6>
+</div>

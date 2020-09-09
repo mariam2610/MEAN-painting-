@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light t" style="font-family:'Times New Roman', Times, serif; background-image: linear-gradient(#721b65,#cc0e74); font-weight:bold; color:white;">
+    <img height="50px" width="50px" src="../../assets/logo2.jpeg" alt="" style="padding: 5px;">
+    <a class="navbar-brand" href="#" style="color: white;"> <i>Be creative- PaintIt </i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="color: black;">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color:white;">Home</a>
+                <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+            </li>
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a routerLink="/categorypage/{{i._id}}" class="dropdown-item" href="#" *ngFor="let i of categories">{{i.category_name}}</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="color: white;">
+                    Artists
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a routerLink="/artist/{{i._id}}" class="dropdown-item" href="#"
+                        *ngFor="let i of artists">{{i.artist_name}}</a>
+                </div>
+            </li>
+
+
+            <li class="nav-item">
+                <a routerLink="/register" class="nav-link" href="#" style="color: white;">Register</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/login" class="nav-link" href="#" style="color: white;">Login</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/products" class="nav-link" href="#" style="color: white;">Sell Paintings</a>
+            </li>
+        </ul>
+    </div>
+</nav>

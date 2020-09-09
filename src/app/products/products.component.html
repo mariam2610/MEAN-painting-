@@ -1,0 +1,92 @@
+<!-- <form [formGroup]="userForm" (ngSubmit)="PostData(userForm)" enctype="multipart/form-data" -->
+<form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+    <div class="row">
+        <div class="col-lg-4">
+
+        </div>
+
+        <div class="col-lg-4 text-left">
+            <div class="form-group text-center">
+                <img src="../../assets/logo2.jpeg" height="100px" width="200px" alt="" class="center" style="background-color: #cbf1f5; margin: 10px;">
+            </div>
+
+            <div class="form-group-sm">
+                <h4>Painting Details</h4>
+                <label for="pname">Name : <span class="text-danger">*</span> </label>
+                <input type="text" ngModel class="form-control" name="product_name" id=""
+                    placeholder="Enter Artwork Name">
+            </div>
+
+            <div class="form-group-sm">
+                <label for="pdesc">Description : <span class="text-danger">*</span> </label>
+                <input type="text" ngModel class="form-control" name="product_desc" id=""
+                    placeholder="Enter Artwork Description">
+            </div>
+
+            <div class="form-group-sm">
+                <label for="pprice">Price : <span class="text-danger">*</span> </label>
+                <input type="tel" ngModel class="form-control" name="product_price" id=""
+                    placeholder="Enter Artwork Price">
+            </div>
+
+            <div class="form-group-sm">
+                <label for="part">Artist Name : <span class="text-danger">*</span> </label>
+                <input type="text" ngModel class="form-control" name="product_artist" id="" placeholder="Enter Artist Name">
+            </div>
+
+            <div class="form-group-sm">
+                <label for="pcate">Category : <span class="text-danger">*</span> </label>
+                <!-- <input type="text" ngModel class="form-control" name="product_category" id="" placeholder="Enter Category"> -->
+                <select ngModel class="form-control" name="product_category" id="">
+                    <option value="5eef4814849b0c26a499176e">Warli</option>
+                    <option value="5eef4893849b0c26a499176f">Abstract</option>
+                    <option value="5eef48a0849b0c26a4991770">Landscape</option>
+                    <option value="5eef490a849b0c26a4991772">Nature</option>
+                    <option value="5eef4914849b0c26a4991773">Modern art</option>
+                    <option value="5eef4922849b0c26a4991774">Flower</option>
+                    <option value="5eef4932849b0c26a4991775">Charcoal</option>
+                    <option value="5eef4945849b0c26a4991776">Madhubani</option>
+
+                </select>
+            </div>
+                
+            <div class="form-group-sm">
+                <label for="pmed">Medium : <span class="text-danger">*</span> </label>
+                <input type="text" ngModel class="form-control" name="product_medium" id=""
+                    placeholder="Enter Artwork Medium" required>
+            </div>
+
+            <div class="form-group-sm">
+                <label for="psurf">Surface : <span class="text-danger">*</span> </label>
+                <input type="text" ngModel class="form-control" name="product_surface" id=""
+                    placeholder="Enter Artwork Surface" required>
+            </div>
+
+            <div class="form-group-sm">
+                <label for="name">Height : <span class="text-danger">*</span> </label>
+                <input type="text" ngModel class="form-control" name="product_height" id="" placeholder="Enter Height in inches" required>
+            </div>
+
+            <div class="form-group-sm">
+                <label for="name">Width : <span class="text-danger">*</span> </label>
+                <input type="text" ngModel class="form-control" name="product_width" id="" placeholder="Enter Width in inches" required>
+            </div>
+
+            <div class="form-group-sm">
+                <label for="productImagePath">Image Upload: <span class="text-danger">*</span> </label>
+                <input type="file" ngModel class="form-control" name="productImagePath" placeholder="Upload Image" (change)="onFileSelect($event)" required #fileInput/>
+                <!-- <p *ngIf="productImagePath.invalid && (productImagePath.dirty || productImagePath.touched)"> Show an error </p> -->
+            </div>  
+            
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success form-control" required>Submit</button>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-4">
+
+        </div>
+    </div>
+</form>
